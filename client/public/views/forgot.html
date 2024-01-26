@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/forgot.css" />
+
+    <title>Forgot Password</title>
+  </head>
+  <body>
+    <!-- alert -->
+    <div id="custom-alert" class="modal">
+      <div class="modal-content">
+        <p class="font-medium" id="custom-message">Your custom message goes here.</p>
+        <button class="font-medium" id="custom-ok-button">OK</button>
+      </div>
+    </div>
+    
+    <div class="main-container">
+        <form class="signup-form">
+          <div class="msg-invalid"></div>
+          <div class="msg-available"></div>
+          
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          
+          <button class="submit">Submit</button>
+        </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="/js/forgot.js"></script>
+   
+  </body>
+</html>

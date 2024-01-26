@@ -1,0 +1,78 @@
+html{
+  font-size: 56.2%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #a26161;
+  margin: 0;
+  padding: 0;
+  /* position: relative; */
+}
+
+.main-container {
+  margin: 1rem;
+  max-width: 140rem;
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+}
+
+#expense-table {
+  border-collapse: collapse;
+  width: 100%;  
+  font-size: 2rem;
+  /* padding: 0 2rem;
+  margin: 2rem; */
+  margin-bottom: 6rem;
+  /* overflow-x: auto; */
+}
+
+
+#expense-table th, #expense-table td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 1rem;
+}
+
+#expense-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#expense-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+.backbtn {
+  display: block;
+  background-color: #803d3d;
+  border: 3px solid #a79393;
+  color: #2ecc8f;
+  /* border: none; */
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 3rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.backbtn:hover {
+  background-color: #612727;
+  /* transform: translateY(-5px); */
+  border: 2px solid #39f7ac;
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.backbtn {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+}

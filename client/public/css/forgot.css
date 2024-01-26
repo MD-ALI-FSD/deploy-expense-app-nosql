@@ -1,0 +1,119 @@
+html{
+  font-size: 56.2%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #572a2a;
+  margin: 0;
+  padding: 0;
+  max-width: 60rem;
+  margin: auto;
+}
+
+.main-container {
+  display: grid;
+  place-items: center;
+  width: 90%;
+  height: 20rem;
+  margin: 10rem auto;
+  background-color: #703636;
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.2);
+  min-width: 25rem;
+  /* overflow: hidden; */
+  
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #2ecc8f;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  height: 1.2rem;
+  padding: 1rem;
+  margin: 5px 0;
+  border: 3px solid #796a6a;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  background-color: #885555;
+  color: #221f1f;
+}
+
+.submit {
+  display: block;
+  background-color: #803d3d;
+  border: 3px solid #796a6a;
+  color: #2ecc8f;
+  /* border: none; */
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 3rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.submit:hover {
+  background-color: #612727;
+  /* transform: translateY(-5px); */
+  border: 2px solid #39f7ac;
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.error {
+  background: orangered;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(56, 53, 53, 0.822);
+ 
+}
+
+.modal-content {
+  position: absolute;
+  width: 40rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ad8282;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700; 
+}
+
+#custom-ok-button {
+  background-color: #8b5b5b;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 3rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+#custom-ok-button:hover {
+  background-color: #5c3131;
+  border: 0.3rem solid #d5caca;
+  color: #d5caca;
+}

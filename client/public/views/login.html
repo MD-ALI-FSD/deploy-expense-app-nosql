@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/login.css" />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <!-- alert -->
+    <div id="custom-alert" class="modal">
+      <div class="modal-content">
+        <p class="font-medium" id="custom-message">Your custom message goes here.</p>
+        <button class="font-medium" id="custom-ok-button">OK</button>
+      </div>
+    </div>
+    
+    <div class="main-container">
+      <!-- <div class="image-container"> -->
+      <!-- <img src="../img/login.jpg" alt="img" /> -->
+      <div
+        class="cta-img-box"
+        role"img"
+        aria-label="women enjoying food"
+      ></div>
+      <!-- </div> -->
+      <div class="form-container">
+        <form class="signup-form">
+          <div class="msg"></div>
+          <h1>Sign In</h1>
+          <div class="msg"></div>
+          <div class="form-group">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="login-email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Password:</label>
+            <input
+              type="password"
+              id="login-password"
+              name="login-password"
+              required
+            />
+          </div>
+          <button class="signin">Sign In</button>
+          <button class="forgot">Forgot Password</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="display-signin"></div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="/js/login.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script> -->
+  </body>
+</html>

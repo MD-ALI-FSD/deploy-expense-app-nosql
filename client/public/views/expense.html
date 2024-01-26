@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/expense.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <title>Add Expense</title>
+  </head>
+  <body>
+    <!-- alert -->
+    <div id="custom-alert" class="modal">
+      <div class="modal-content">
+        <p id="custom-message">Your custom message goes here.</p>
+        <button id="custom-ok-button">OK</button>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <h1 class="name"></h1>
+      <!-- sub-container1 -->
+      <div class="add-expense">
+        <h1 class="main-header">Enter New Expense</h1>
+        <form class="form">
+          <div class="font-medium msg"></div>
+          <div class="form-div">
+            <div class="form-group">
+              <label class="font-medium" for="eamount">Expense Amount</label>
+              <input class="font-small" type="number" id="eamount" name="eamount" />
+            </div>
+
+            <div class="form-group">
+              <label class="font-medium" for="ediscrp">Description</label>
+              <input class="font-small" type="text" id="ediscrp" name="ediscrp" />
+            </div>
+
+            <div class="form-group">
+              <label class="font-medium" for="ecategory">Expense Category</label>
+              <select class="font-small" id="ecategory" name="ecategory">
+                <option class="font-small" disabled selected value="">Select an option</option>
+                <option class="font-small" value="fuel">Fuel</option>
+                <option class="font-small" value="food">Food</option>
+                <option class="font-small" value="electricity">Electricity</option>
+                <option class="font-small" value="movie">Movie</option>
+              </select>
+            </div>
+
+            <input class="submit button-big" type="submit" value="Add Expense" />
+            <!-- <button class="submit button-big" type="submit">Click to Add Expense</button> -->
+          </div>
+        </form>
+        <div class="after-premium hidden">Premium User</div>
+      </div>
+
+      <!-- sub-container2 -->
+      <div class="rzp-parent">
+        <button class="rzpbtn button-small">Buy Premium</button>
+        <button class="doe hidden button-small">See Expense Details</button>
+        <button class="download hidden button-small">Download Expense Details</button>
+        <button class="signoutbtn">Sign Out</button>
+        <button class="deleteuserbtn">Delete Account</button>
+      </div>
+
+      <!-- sub-container3 -->
+      <div class="lead-board-parent hidden">
+        <h1>Top Three Expenses</h1>
+        <div class="lead-board"></div>
+      </div>
+
+      <!-- sub-container4 -->
+      <div class="display-expense">
+        <h1>Details of Your Past Expenses</h1>
+        <div>
+          <div class="total-expense"></div>
+          <form class="noe">
+            <label class="font-small" for="no-of-expenses">Number of Expenses Per Page</label>
+            <select id="no-of-expenses" name="no-of-expenses">
+              <option class="font-small" value="4">4</option>
+              <option class="font-small" value="8">8</option>
+              <option class="font-small" value="12">12</option>
+              <option class="font-small" value="16">16</option>
+              <option class="font-small" value="20">20</option>
+            </select>
+          </form>
+        </div>
+        <div class="display"></div>
+        <div class="pagebuttons"></div>
+      </div>
+    </div>
+
+    <!-- Include Razorpay SDK -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script src="/js/expense.js"></script>
+  </body>
+</html>

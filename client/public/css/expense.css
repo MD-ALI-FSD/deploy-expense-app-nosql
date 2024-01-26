@@ -1,0 +1,888 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #572a2a;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 5rem 3rem;
+  border-radius: 1.5rem;
+  max-width: 150rem;
+  /* box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.2); */
+}
+
+/******************sub-containers********/
+.add-expense {
+  background-color: #834949;
+  border-radius: 1.5rem;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 1rem;
+
+}
+
+
+.lead-board-parent {
+  background-color: #8b6363dd;
+  border-radius: 1.5rem;
+  padding: 0rem 1rem 2rem 1rem;
+  
+}
+
+.display-expense{
+  width: 100%;
+  background-color: #8b6363dd;
+  border-radius: 1.5rem;
+  padding: 0 2rem;
+}
+
+/*****************General****************/
+
+label {
+  display: block;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #00000085;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  /* margin: 20rem; */
+  gap: 4rem;
+  width: 90%;
+}
+
+.form-group {
+  margin: 0 1rem;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-weight: 800;
+  color: #362222;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+}
+
+input[type="number"],
+input[type="text"], 
+#ecategory,
+#no-of-expenses {
+  width: 100%;
+  height: 3.2rem;
+  /* padding: 10rem; */
+  margin: 0.5rem 0;
+  border: 0.2rem solid #d5caca;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  background-color: #ad6c6c;
+  color: #221f1f;
+}
+
+#ecategory{
+  height: 3.8rem;
+  width: 20rem;
+}
+
+.submit {
+  display: block;
+  background-color: #8e5c5c;
+  border: 0.3rem solid #796a6a;
+  box-shadow: 0.5rem 0rem 1rem rgba(0, 0, 0, 0.2);
+  color: #362222;
+  /* border: none; */
+  padding: 0.5rem 2rem;
+  font-size: 1.8rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  /* margin: 0 auto; */
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  font-weight: 700;
+}
+
+.submit:hover {
+  background-color: #5c3131;
+  border: 0.3rem solid #d5caca;
+  color: #d5caca;
+}
+
+.error {
+  background: orangered;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+}
+
+.deletebtn,
+.rzpbtn,
+.doe,
+.pgbutton,
+.download,
+#custom-ok-button,
+.signoutbtn,
+.deleteuserbtn {
+  display: inline-block;
+  background-color: #8b5b5b;
+  border: 0.3rem solid #796a6a;
+  box-shadow: 0.5rem 0rem 1rem rgba(0, 0, 0, 0.2);
+  color: #362222;
+  /* border: none; */
+  border: 0.1rem solid #d5caca;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  /* margin: 0 auto; */
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 550;
+  /* font-weight: 700; */
+  /* margin-top: 10rem; */
+}
+
+.editbtn:hover,
+.rzpbtn:hover,
+.doe:hover,
+.pgbutton:hover,
+.download:hover,
+#custom-ok-button:hover,
+.signoutbtn:hover{
+  background-color: #5c3131;
+  border: 0.3rem solid #d5caca;
+  color: #d5caca;
+}
+
+.deleteuserbtn:hover {
+  background-color: #bb0808;
+  border: 0.3rem solid #d5caca;
+  color: #d5caca;
+}
+
+.hidden {
+  /* visibility: hidden; */
+  display: none;
+  cursor: none;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(56, 53, 53, 0.822);
+  z-index: 5;
+}
+
+.modal-content {
+  position: absolute;
+  width: 40rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ad8282;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+
+}
+
+#custom-ok-button {
+  background-color: #8b5b5b;
+  color: #fff;
+  border: none;
+  /* padding: 1rem 2rem; */
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+#custom-ok-button:hover {
+  background-color: #5c3131;
+  border: 0.3rem solid #d5caca;
+  color: #d5caca;
+}
+
+
+/******************sub-container1********/
+.after-premium {
+  /* content: "Premium User"; */
+  word-spacing: 0.5rem;
+  position: absolute;
+  top: 26%;
+  right: -5%;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  background-color: #ffd43b;
+  padding: 1rem 9rem;
+  transform: rotate(35deg);
+}
+
+/******************sub-container2********/
+.rzp-parent {
+  text-align: center;
+}
+
+.doe, 
+.download, 
+.signoutbtn,
+.rzpbtn{
+  margin-right: 2rem;
+}
+
+/******************sub-container3********/
+.lead-board-parent{
+  display: grid;
+  place-items: center;
+  width: 42rem;
+  margin: 3rem auto;
+}
+
+.lead-board .child{
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 3rem;
+  align-self:center;
+  margin-top: 1rem;
+  padding: 1rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 545;
+  width: 37rem;
+  background-color: #684a4add;
+  letter-spacing: 0.025rem;
+}
+
+
+
+
+/******************sub-container4********/
+.total-expense {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: #362222;
+  margin-bottom: 2rem;
+}
+
+#no-of-expenses {
+  height: 2.5rem;
+  width: 10rem;
+}
+
+.noe{
+  display: flex;
+  gap: 2rem;
+}
+
+.display {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(10%, 1fr)); */
+  grid-template-columns: repeat(3, 33%);
+  gap: 1rem;
+  margin: auto auto;
+}
+
+.display .child {
+  justify-self: center;
+  background-color: #a57676dd;
+  width: 38rem;
+  height: 10rem;
+  height: auto;
+  padding: 2rem 0;
+  margin: 2rem;
+  border-radius: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.2);
+  /* margin-bottom: 20rem; */
+}
+
+.display .child button{
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+.editbtn {
+  display: inline-block;
+  background-color: #8b5b5b;
+  border: 0.3rem solid #796a6a;
+  box-shadow: 0.5rem 0rem 1rem rgba(0, 0, 0, 0.2);
+  color: #362222;
+  /* border: none; */
+  border: 0.1rem solid #d5caca;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  /* margin: 0 auto; */
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 550;
+  /* margin-top: 10rem; */
+}
+
+.pagebuttons{
+  display: flex;
+  gap: 1rem;
+  place-content: center;
+}
+
+.pgbutton {
+  border-radius: 50%;
+}
+
+.selected {
+  background-color: #5c3131;
+  border: 0.3rem solid #d5caca;
+  color: #d5caca;
+}
+
+.deletebtn:hover {
+  background-color: #5c3131;
+  border: 0.3rem solid #d5caca;
+  color: #d5caca;
+}
+
+
+.font-medium{
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.font-small{
+  font-size: 2.4rem;
+  font-weight: 550;
+}
+
+
+
+
+
+
+/****************************************************/
+ /* Media Queries */
+/****************************************************/
+@media (max-width: 1280px) {
+  /* Adjust the styles here */
+  html {
+    font-size: 49%;
+  }
+
+  .main-container{
+    max-width: 200rem;
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+
+  .font-medium{
+    font-size: 2.4rem;
+  }
+
+  .font-small{
+    font-size: 2.1rem;
+  }
+  
+  #ecategory{
+    height: 3.8rem;
+    width: 25rem;
+    font-size: 2rem;
+  }
+
+  #no-of-expenses{
+    font-size: 2rem;
+  }
+
+  .lead-board .child{
+    font-size: 1.8rem;
+  }
+
+  .total-expense {
+    font-size: 2rem;
+  }
+
+  .button-big{
+    font-size: 2rem;
+  }
+
+  .button-small{
+    font-size: 1.8rem;
+  }
+
+  .after-premium {
+    font-size: 2rem;
+  }
+
+  .display .child {
+    font-size: 2.2rem;
+    width: 43rem;
+    width: 90%;
+    height: 12rem;
+    height: auto;
+    margin: 1rem;
+  }
+
+  .display .child button{
+    font-size: 1.9rem;
+    margin-right: 1rem;
+  }
+}
+
+/* Apply specific styles for screens with a width up to 1000px */
+@media (max-width: 1130px) {
+  /* Adjust the styles here */
+  html {
+    font-size: 45%;
+  }
+
+  .main-container{
+    max-width: 200rem;
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+
+  .font-medium{
+    font-size: 2.7rem;
+  }
+
+  .font-small{
+    font-size: 2.3rem;
+    font-weight: 550;
+  }
+  
+  #ecategory{
+    height: 3.8rem;
+    width: 25rem;
+  }
+
+  .lead-board .child{
+    font-size: 1.9rem;
+  }
+
+  .total-expense {
+    font-size: 2.2rem;
+  }
+  
+  .button-big{
+    font-size: 2.1rem;
+  }
+
+  .button-small{
+    font-size: 1.9rem;
+  }
+
+  .after-premium {
+    font-size: 2rem;
+  }
+
+  .display .child {
+    font-size: 2.3rem;
+    width: 43rem;
+    width: 90%;
+    height: 12rem;
+    height: auto;
+    margin: 1rem;
+  }
+
+  .display .child button{
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+}
+
+/* Apply specific styles for screens with a width up to 700px */
+@media (max-width: 1030px) {
+  /* Adjust the styles here */
+  html {
+    font-size: 37%;
+  }
+
+  .main-container{
+    max-width: 200rem;
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+
+  .font-medium{
+    font-size: 2.9rem;
+  }
+
+  .font-small{
+    font-size: 2.5rem;
+    font-weight: 550;
+  }
+  
+  #ecategory{
+    height: 3.8rem;
+    width: 25rem;
+  }
+
+  .lead-board .child{
+    font-size: 1.9rem;
+  }
+
+  .total-expense {
+    font-size: 2.3rem;
+  }
+  
+  .button-big{
+    font-size: 2.1rem;
+  }
+
+  .button-small{
+    font-size: 1.9rem;
+  }
+
+  .after-premium {
+    font-size: 2rem;
+  }
+
+  .display .child {
+    font-size: 2.6rem;
+    width: 45rem;
+    width: 90%;
+    height: 14rem;
+    height: auto;
+    margin: 1rem;
+  }
+
+  .display .child button{
+    font-size: 2.1rem;
+    margin-right: 1rem;
+  }
+ 
+  
+  /* Add more responsive styles as needed */
+}
+
+/* Apply specific styles for screens with a width up to 400px */
+@media (max-width: 930px) {
+  /* Adjust the styles here */
+  html {
+    font-size: 33%;
+  }
+
+  .main-container{
+    max-width: 200rem;
+  }
+
+  h1{
+    font-size: 3.2rem;
+  }
+
+  .font-medium{
+    font-size: 3.1rem;
+  }
+
+  .font-small{
+    font-size: 2.8rem;
+    font-weight: 550;
+  }
+  
+  #ecategory{
+    height: 3.8rem;
+    width: 25rem;
+  }
+
+  .lead-board .child{
+    font-size: 1.9rem;
+  }
+
+  .total-expense {
+    font-size: 2.2rem;
+  }
+  
+  .button-big{
+    font-size: 2.4rem;
+  }
+
+  .button-small{
+    font-size: 2.2rem;
+  }
+
+  .after-premium {
+    font-size: 2rem;
+  }
+
+  .display .child {
+    font-size: 3rem;
+    width: 42rem;
+    width: 90%;
+    height: 14rem;
+    height: auto;
+    margin: 1rem;
+  }
+
+  .display .child button{
+    font-size: 2.3rem;
+    margin-right: 1rem;
+  }
+  /* Add more responsive styles as needed */
+}
+
+
+@media (max-width: 840px) {
+  /* Adjust the styles here */
+ html{
+  font-size: 32%;
+ }
+
+  .main-container{
+    max-width: 200rem;
+  }
+
+  .add-expense {
+    height: 45rem;
+    width: 100%;  
+  }
+
+  .main-header{
+    margin-top: 7rem;
+  }
+
+  input[type="number"],
+  input[type="text"], 
+  #ecategory,
+  #no-of-expenses {
+    width: 80%;
+    height: 4.2rem;
+  }
+
+  #ecategory{
+    height: 4.8rem;
+    width: 82%;
+  }
+  
+  .form-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+
+  .after-premium {
+    word-spacing: 0.5rem;
+    position: absolute;
+    top: 0%;
+    right: -0%;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    background-color: #ffd43b;
+    padding: 1rem 11rem;
+    transform: rotate(0deg);
+  }
+
+  h1{
+    font-size: 4.5rem;
+  }
+
+  .font-medium{
+    font-size: 3.2rem;
+  }
+
+  .font-small{
+    font-size: 2.8rem;
+    font-weight: 550;
+  }
+  
+
+  .lead-board-parent{
+    width: 60rem;
+  }
+
+  .lead-board{
+    width: 59rem;;
+  }
+
+  .lead-board .child{
+    width: 57rem;
+    font-size: 2.6rem;
+  }
+
+  .total-expense {
+    font-size: 2.8rem;
+  }
+  
+  .button-big{
+    font-size: 3.2rem;
+    width: 80%;
+  }
+
+  .button-small{
+    font-size: 2.9rem;
+  }
+
+  #no-of-expenses{
+    width: 7rem;
+  }
+
+  /* .display-expense{
+    margin: 2rem;
+  } */
+  
+  .display {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(10%, 1fr)); */
+    grid-template-columns: repeat(2, 50%);
+    gap: 1rem;
+    /* margin: 3rem; */
+  }
+
+  .display .child {
+    font-size: 3rem;
+    width: 33rem;
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .display .child button{
+    font-size: 2.2rem;
+    margin-right: 1rem;
+  }
+
+  /* Add more responsive styles as needed */
+}
+
+@media (max-width: 450px) {
+  /* Adjust the styles here */
+  html {
+    font-size:43%;
+  }
+
+  .main-container{
+    max-width: 200rem;
+  }
+
+  .main-header{
+    margin-top: 7rem;
+  }
+
+  .add-expense {
+    height: 72rem;
+    width: 100%;  
+  }
+
+  input[type="number"],
+  input[type="text"], 
+  #ecategory,
+  #no-of-expenses {
+    width: 80%;
+    height: 4.2rem;
+  }
+
+  #ecategory{
+    height: 4.8rem;
+    width: 82%;
+  }
+  
+  .form-div {
+    display: grid;
+    grid-template-columns: 1fr;
+   
+  }
+
+  h1{
+    font-size: 4rem;
+  }
+
+  .font-medium{
+    font-size: 3.8rem;
+  }
+
+  .font-small{
+    font-size: 3.2rem;
+    font-weight: 550;
+  }
+  
+
+  .lead-board-parent{
+    width: 60rem;
+    height: auto;
+    width: 100%; 
+    margin-top: 5rem;
+  }
+
+  .lead-board{
+    width: 59rem;
+    width: 90%;
+  }
+
+  .lead-board .child{
+    width: 57rem;
+    width: 95%;
+    font-size: 2.3rem;
+  }
+
+  .total-expense {
+    font-size: 2.8rem;
+  }
+  
+  .button-big{
+    font-size: 3.2rem;
+    width: 60%;
+  }
+
+  .button-small{
+    font-size: 2.9rem;
+  }
+
+  #no-of-expenses{
+    width: 7rem;
+  }
+
+  .display {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(10%, 1fr)); */
+    grid-template-columns: repeat(1, 100%);
+    gap: 1rem;
+    margin: auto auto;
+  }
+
+  .display .child {
+    font-size: 2.7rem;
+    width: 45rem;
+    /* width: 90%; */
+    height: 16rem;
+    margin: 1rem;
+  }
+
+  .display .child button{
+    font-size: 2.2rem;
+    margin-right: 1rem;
+  }
+
+  /* Add more responsive styles as needed */
+}
+
+.main-container{
+  margin-left: 1rem;
+}

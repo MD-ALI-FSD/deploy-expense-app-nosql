@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/detailed-expense.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <title>Add Expense</title>
+  </head>
+  <body>
+    <button class="backbtn">Back</button>
+    <div class="main-container">
+      <!-- sub-container1 -->
+      <div class="sub-container daily-expense">
+        <h1>Daily Expenses</h1>
+        <table id="expense-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Expense</th>
+            </tr>
+          </thead>
+          <tbody id="table-body-daily">
+            <!-- Data will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- sub-container2 -->
+      <div class="sub-container weekly-expense">
+        <h1>Weekly Expenses</h1>
+        <table id="expense-table">
+          <thead>
+            <tr>
+              <th>Week</th>
+
+              <th>Total Expense</th>
+            </tr>
+          </thead>
+          <tbody id="table-body-weekly">
+            <!-- Data will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- sub-container3 -->
+      <div class="sub-container montly-expense">
+        <h1>Monthly Expenses</h1>
+        <table id="expense-table">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Year</th>
+              <th>Total Expense</th>
+            </tr>
+          </thead>
+          <tbody id="table-body-monthly">
+            <!-- Data will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- sub-container4 -->
+      <div class="sub-container url">
+        <h1>List Of Urls of Your Downloaded Expense Files</h1>
+        <table id="expense-table">
+          <thead>
+            <tr>
+              <th>Url</th>
+              <th>Download Date</th>
+            </tr>
+          </thead>
+          <tbody id="table-body-url">
+            <!-- Data will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="/js/detailed-expenses.js"></script>
+  </body>
+</html>
