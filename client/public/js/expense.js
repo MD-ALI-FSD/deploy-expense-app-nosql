@@ -198,7 +198,7 @@ async function displayData() {
   // const { users } = userDetails.data;
 
   const userName = document.querySelector(".name");
-  userName.innerHTML = `Welcome ${user.name}`;
+  userName.innerHTML = `Welcome <span class="name-span">${user.name}</span>`;
 
   // Check if the Premium ad alert has been displayed before
   const flag = localStorage.getItem("premiumAlertDisplayed");
