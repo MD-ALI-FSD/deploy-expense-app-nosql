@@ -447,6 +447,7 @@ parent.addEventListener("click", async function editDelete(e) {
     return;
   }
 
+  window.scrollTo({ top: 0, behavior: "smooth" }); //Use 'smooth' for smooth scrolling
   //Fetching token from local storage
   const token = localStorage.getItem("token");
   //setting header

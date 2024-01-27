@@ -682,7 +682,7 @@ input[type="text"],
     color: #333;
     font-weight: 700;
     background-color: #ffd43b;
-    padding: 1rem 11rem;
+    padding: 1rem 7rem;
     transform: rotate(0deg);
   }
 
@@ -769,6 +769,7 @@ input[type="text"],
 
   .main-header {
     margin-top: 7rem;
+    font-size: 2.2rem;
   }
 
   .add-expense {
@@ -861,6 +862,11 @@ input[type="text"],
   .display .child button {
     font-size: 2.2rem;
     margin-right: 1rem;
+  }
+
+  .after-premium {
+    font-size: 2rem;
+    padding: 1rem 4rem;
   }
 
   /* Add more responsive styles as needed */
