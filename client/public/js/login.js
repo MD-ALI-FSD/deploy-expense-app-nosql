@@ -4,6 +4,7 @@ const login_email = document.querySelector("#login-email");
 const login_password = document.querySelector("#login-password");
 const signin = document.querySelector(".signin");
 const forgotBtn = document.querySelector(".forgot");
+const signupBtn = document.querySelector(".signup");
 
 //function to display custom alert message
 const customAlert = document.getElementById("custom-alert");
@@ -16,6 +17,14 @@ const customOkButton = document.getElementById("custom-ok-button");
 forgotBtn.addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href = "forgot-password-page";
+});
+
+/****************************************************/
+// Listening to the Click on Forgot Password button
+/****************************************************/
+signupBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = "/";
 });
 
 /****************************************************/

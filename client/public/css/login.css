@@ -27,7 +27,12 @@ img {
 
 .cta-img-box {
   /* width: 100%; */
-  background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)), url("/images/login.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("/images/login.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -35,6 +40,12 @@ img {
 .form-container {
   background-color: #703636;
 }
+
+/* .button-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+} */
 
 .signup-form {
   padding: 2rem;
@@ -75,13 +86,14 @@ input[type="password"] {
 }
 
 .signin,
-.forgot {
+.forgot,
+.signup {
   display: block;
   background-color: #803d3d;
   border: 3px solid #796a6a;
   color: #2ecc8f;
   /* border: none; */
-  padding: 1rem 2rem;
+  padding: 0.6rem 2rem;
   font-size: 1.8rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -94,7 +106,8 @@ input[type="password"] {
 }
 
 .signin:hover,
-.forgot:hover {
+.forgot:hover,
+.signup:hover {
   background-color: #612727;
   /* transform: translateY(-5px); */
   border: 2px solid #39f7ac;
